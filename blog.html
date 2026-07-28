@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VATZ Blog — Insights on UI/UX Design, Branding, Web Development, AI, Digital Marketing, and creative industry trends from the VATZ team.">
+  <meta name="robots" content="index, follow">
+  <title>Blog | VATZ — Creative Digital Agency</title>
+  <link rel="canonical" href="https://vatz.studio/blog.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='80' fill='%236D28FF'>V</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VATZ">
+  <meta property="og:title" content="Blog | VATZ — Creative Digital Agency">
+  <meta property="og:description" content="Insights on UI/UX Design, Branding, Web Development, AI, and Digital Marketing from the VATZ team.">
+  <meta property="og:url" content="https://vatz.studio/blog.html">
+  <meta property="og:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | VATZ — Creative Digital Agency">
+  <meta name="twitter:description" content="Insights on UI/UX Design, Branding, Web Development, AI, and Digital Marketing from the VATZ team.">
+  <meta name="twitter:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "VATZ Blog",
+    "url": "https://vatz.studio/blog.html",
+    "description": "Design, technology and creative industry insights from the VATZ team.",
+    "publisher": { "@type": "Organization", "name": "VATZ", "url": "https://vatz.studio" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══════════════ SITE HEADER ══════════════ -->
+<header id="site-header" role="banner">
+  <a href="index.html" class="header-logo" aria-label="VATZ — Home">
+    <img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="header-logo-img">
+  </a>
+  <nav class="header-nav" aria-label="Primary navigation">
+    <a href="services.html"     class="header-nav-link" data-page="services.html">Services</a>
+    <a href="solutions.html"    class="header-nav-link" data-page="solutions.html">Solutions</a>
+    <a href="portfolio.html"    class="header-nav-link" data-page="portfolio.html">Our Work</a>
+    <a href="industries.html"   class="header-nav-link" data-page="industries.html">Industries</a>
+    <a href="technologies.html" class="header-nav-link" data-page="technologies.html">Technologies</a>
+    <a href="careers.html"      class="header-nav-link" data-page="careers.html">Careers</a>
+  </nav>
+  <div class="header-right">
+    <a href="tel:+15551234567" class="header-phone-btn" aria-label="Call us">
+      <i class="fa-solid fa-phone-volume"></i>
+    </a>
+    <button class="mega-menu-trigger" aria-controls="mega-menu-overlay" aria-expanded="false" aria-label="Toggle navigation menu">
+      <div class="mega-trigger-label-wrap">
+        <span class="mega-trigger-label-menu">MENU</span>
+        <span class="mega-trigger-label-close" aria-hidden="true">CLOSE</span>
+      </div>
+      <div class="mega-trigger-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════ MEGA MENU OVERLAY ══════════════ -->
+<div id="mega-menu-overlay" class="mega-menu-overlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <div class="mm-body">
+    <ul class="mm-main" aria-label="Menu links">
+      <li class="mm-item">
+        <a href="about.html" class="mm-link" data-page="about.html">
+          <span class="mm-link-num">01</span>About Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="blog.html" class="mm-link mm-active" data-page="blog.html">
+          <span class="mm-link-num">02</span>Blog
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="industries.html" class="mm-link" data-page="industries.html">
+          <span class="mm-link-num">03</span>Industries
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="contact.html" class="mm-link" data-page="contact.html">
+          <span class="mm-link-num">04</span>Contact Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+    </ul>
+    <!-- Responsive-only extra links (hidden on desktop ≥1101px) -->
+    <div class="mm-extra-links" aria-label="More page links">
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="index.html" class="mm-link" data-page="index.html"><span class="mm-link-num">05</span>Home<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="services.html" class="mm-link" data-page="services.html"><span class="mm-link-num">06</span>Services<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="solutions.html" class="mm-link" data-page="solutions.html"><span class="mm-link-num">07</span>Solutions<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="portfolio.html" class="mm-link" data-page="portfolio.html"><span class="mm-link-num">08</span>Our Work<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="technologies.html" class="mm-link" data-page="technologies.html"><span class="mm-link-num">09</span>Technologies<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="careers.html" class="mm-link" data-page="careers.html"><span class="mm-link-num">10</span>Careers<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+    </div>
+    <div class="mm-info-panel" aria-hidden="true">
+      <div>
+        <h2 class="mm-info-heading">About VATZ</h2>
+        <p class="mm-info-desc">VATZ is a premium creative digital agency blending visual artistry, audio excellence, and cutting-edge technology to deliver transformative brand experiences for clients worldwide.</p>
+      </div>
+      <div class="mm-stats">
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">10<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Years of Expertise</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">150<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Clients Globally</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">250<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Completed Projects</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">40<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Dedicated Creators</div>
+        </div>
+      </div>
+      <a href="about.html" class="mm-info-cta">More about Us <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="mm-footer">
+    <div class="mm-footer-links">
+      <a href="index.html"        class="mm-footer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="services.html"     class="mm-footer-link"><i class="fa-solid fa-gears"></i> Services</a>
+      <a href="technologies.html" class="mm-footer-link"><i class="fa-solid fa-microchip"></i> Technologies</a>
+    </div>
+    <a href="contact.html" class="mm-cta-btn">Start a Project <i class="fa-solid fa-paper-plane"></i></a>
+  </div>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero" id="main-content">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-bg-orb"></div>
+  <div class="hero-bg-orb"></div>
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--purple-400);">Blog</span>
+    </nav>
+    <span class="section-label reveal"><i class="fa-solid fa-pen-nib"></i> Insights & Ideas</span>
+    <h1 class="section-title reveal delay-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+      The VATZ <span class="gradient-text">Journal</span>
+    </h1>
+    <p class="section-subtitle reveal delay-2" style="margin: 0 auto; text-align: center;">
+      Design thinking, engineering deep-dives, industry trends, and creative process stories from the people building world-class digital products every day.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ BLOG CONTENT ═══ -->
+<section class="section" style="padding-top: 3rem;">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- ════ MAIN COLUMN ════ -->
+      <main class="blog-main">
+
+        <!-- Featured Post -->
+        <div style="margin-bottom: 1rem;">
+          <span class="section-label" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-fire-flame-curved"></i> Featured Article</span>
+        </div>
+        <article class="featured-post reveal">
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+               alt="The Future of UI Design in the Age of AI" class="featured-post-img" loading="lazy" decoding="async">
+          <div class="featured-post-body">
+            <span class="post-cat-badge cat-ai"><i class="fa-solid fa-robot"></i> AI & Design</span>
+            <h2 style="font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 800; line-height: 1.3; margin: 0;">
+              <a href="blog-detail.html" class="post-title-link">The Future of UI Design in the Age of Generative AI</a>
+            </h2>
+            <p style="font-size: .9rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+              Generative AI isn't replacing designers — it's fundamentally changing what designers do. We explore how tools like Midjourney, Figma AI, and GPT-4o are reshaping the creative workflow and what it means for the profession in 2026 and beyond.
+            </p>
+            <div class="post-meta-row">
+              <span><i class="fa-solid fa-user" style="color: var(--purple-400); margin-right: 5px;"></i>Maya Chen</span>
+              <span class="post-meta-sep">·</span>
+              <span><i class="fa-regular fa-calendar" style="color: var(--purple-400); margin-right: 5px;"></i>July 18, 2026</span>
+              <span class="post-meta-sep">·</span>
+              <span><i class="fa-regular fa-clock" style="color: var(--purple-400); margin-right: 5px;"></i>8 min read</span>
+            </div>
+            <a href="blog-detail.html" class="btn btn-primary" style="align-self: flex-start; font-size: .85rem; padding: 10px 22px;">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Category Filter -->
+        <div class="cat-filter-bar reveal">
+          <button class="cat-filter-btn active" onclick="filterPosts('all', this)">All Posts</button>
+          <button class="cat-filter-btn" onclick="filterPosts('design', this)">Design</button>
+          <button class="cat-filter-btn" onclick="filterPosts('development', this)">Development</button>
+          <button class="cat-filter-btn" onclick="filterPosts('ai', this)">AI</button>
+          <button class="cat-filter-btn" onclick="filterPosts('branding', this)">Branding</button>
+          <button class="cat-filter-btn" onclick="filterPosts('marketing', this)">Marketing</button>
+          <button class="cat-filter-btn" onclick="filterPosts('industry', this)">Industry</button>
+        </div>
+
+        <!-- Articles Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;" id="articles-grid">
+
+          <!-- Article 1 — Design -->
+          <article class="article-card reveal delay-1" data-cat="design">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80"
+                 alt="Design tokens" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-design" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-pen-ruler"></i> Design</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Design Tokens in 2026: Building Scalable UI Systems That Last</a>
+              </h3>
+              <p class="article-card-excerpt">How to architect a token-based design system that scales across web, mobile, and AI-generated surfaces without breaking every time your brand refreshes.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Alex Rivera</span>
+                <span class="post-meta-sep">·</span>
+                <span>July 12, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>6 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 2 — Development -->
+          <article class="article-card reveal delay-2" data-cat="development">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
+                 alt="React Server Components" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-dev" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-code"></i> Development</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">React Server Components: A Practical Guide for Production Apps</a>
+              </h3>
+              <p class="article-card-excerpt">RSC changed how we think about data fetching and component architecture. Here's what we learned shipping three large-scale RSC apps to production in 2026.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>James Park</span>
+                <span class="post-meta-sep">·</span>
+                <span>July 8, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>11 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 3 — Branding -->
+          <article class="article-card reveal delay-3" data-cat="branding">
+            <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80"
+                 alt="Brand identity trends" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-branding" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-gem"></i> Branding</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">The 7 Brand Identity Trends Defining Visual Culture in 2026</a>
+              </h3>
+              <p class="article-card-excerpt">From neo-brutalist type to liquid gradients and AI-generated mascots — the visual language brands are adopting right now and what's driving it.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Maya Chen</span>
+                <span class="post-meta-sep">·</span>
+                <span>July 3, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>7 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 4 — AI -->
+          <article class="article-card reveal delay-1" data-cat="ai">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80"
+                 alt="RAG pipelines" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-ai" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-robot"></i> AI</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Building a Production-Grade RAG Pipeline: Lessons from the Field</a>
+              </h3>
+              <p class="article-card-excerpt">Retrieval-Augmented Generation sounds simple in tutorials. In production it's a minefield. We document every mistake we made so you don't have to.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>James Park</span>
+                <span class="post-meta-sep">·</span>
+                <span>June 27, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>14 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 5 — Marketing -->
+          <article class="article-card reveal delay-2" data-cat="marketing">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                 alt="SEO in 2026" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-marketing" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-chart-line"></i> Marketing</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">SEO in the AI Search Era: What Actually Moves the Needle in 2026</a>
+              </h3>
+              <p class="article-card-excerpt">With AI Overviews eating clicks and zero-click searches at an all-time high, the old SEO playbook is dead. Here's the new one.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Sofia Martinez</span>
+                <span class="post-meta-sep">·</span>
+                <span>June 21, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>9 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 6 — Industry -->
+          <article class="article-card reveal delay-3" data-cat="industry">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80"
+                 alt="FinTech design" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-industry" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-building-columns"></i> Industry</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Why FinTech UX Is the Hardest Design Problem — and How to Crack It</a>
+              </h3>
+              <p class="article-card-excerpt">Trust, regulatory constraints, and complexity at scale — designing for financial services is a discipline unto itself. Here's our framework after 30+ FinTech projects.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Alex Rivera</span>
+                <span class="post-meta-sep">·</span>
+                <span>June 15, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>10 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 7 — Design -->
+          <article class="article-card reveal delay-1" data-cat="design">
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
+                 alt="Accessibility audit" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-design" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-pen-ruler"></i> Design</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Accessibility Is Not a Checklist: A Designer's Honest Manifesto</a>
+              </h3>
+              <p class="article-card-excerpt">WCAG compliance is the floor, not the ceiling. We make the case for accessibility-first design thinking that produces better products for everyone, not just users with disabilities.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Maya Chen</span>
+                <span class="post-meta-sep">·</span>
+                <span>June 9, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>8 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 8 — Development -->
+          <article class="article-card reveal delay-2" data-cat="development">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80"
+                 alt="Web performance" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-dev" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-code"></i> Development</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Core Web Vitals in 2026: Our Complete Optimisation Playbook</a>
+              </h3>
+              <p class="article-card-excerpt">We've audited hundreds of sites. These are the exact techniques — from font loading to image pipelines to JavaScript budgets — that move Lighthouse scores from 60 to 95+.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>James Park</span>
+                <span class="post-meta-sep">·</span>
+                <span>June 2, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>13 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 9 — Branding -->
+          <article class="article-card reveal delay-3" data-cat="branding">
+            <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=600&q=80"
+                 alt="Audio branding" class="article-card-img" loading="lazy" decoding="async">
+            <div class="article-card-body">
+              <span class="post-cat-badge cat-branding" style="font-size: .68rem; padding: 4px 12px;"><i class="fa-solid fa-gem"></i> Branding</span>
+              <h3 class="article-card-title">
+                <a href="blog-detail.html" class="post-title-link">Sonic Branding: Why Your Brand Needs a Sound Identity in 2026</a>
+              </h3>
+              <p class="article-card-excerpt">From Netflix's ta-dum to Apple's startup chime — sonic identities are among the most powerful brand assets a company can own. Here's how to build one.</p>
+              <div class="post-meta-row" style="font-size: .73rem;">
+                <span>Sofia Martinez</span>
+                <span class="post-meta-sep">·</span>
+                <span>May 28, 2026</span>
+                <span class="post-meta-sep">·</span>
+                <span>7 min</span>
+              </div>
+              <a href="blog-detail.html" class="article-read-link">Read More <i class="fa-solid fa-arrow-right" style="font-size: .7rem;"></i></a>
+            </div>
+          </article>
+
+        </div><!-- /articles-grid -->
+
+        <!-- Pagination -->
+        <nav class="pagination reveal" aria-label="Blog pagination">
+          <a class="page-btn active" href="#" aria-current="page">1</a>
+          <a class="page-btn" href="#">2</a>
+          <a class="page-btn" href="#">3</a>
+          <span class="page-btn" style="cursor:default;opacity:.3;">…</span>
+          <a class="page-btn" href="#">8</a>
+          <a class="page-btn wide" href="#" aria-label="Next page">Next <i class="fa-solid fa-arrow-right" style="font-size:.7rem;"></i></a>
+        </nav>
+
+      </main><!-- /blog-main -->
+
+      <!-- ════ SIDEBAR ════ -->
+      <aside class="blog-sidebar">
+
+        <!-- Search -->
+        <div class="sidebar-widget reveal">
+          <h3 class="sidebar-heading"><i class="fa-solid fa-magnifying-glass" style="color:var(--purple-400);margin-right:8px;"></i>Search</h3>
+          <form role="search" onsubmit="return false;" style="display:flex;gap:.5rem;">
+            <input type="search" placeholder="Search articles…" class="newsletter-input" aria-label="Search articles" style="flex:1;">
+            <button type="submit" class="btn btn-primary" style="padding:0 1rem;flex-shrink:0;" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Popular Posts -->
+        <div class="sidebar-widget reveal">
+          <h3 class="sidebar-heading"><i class="fa-solid fa-fire-flame-curved" style="color:var(--purple-400);margin-right:8px;"></i>Popular Posts</h3>
+          <a href="blog-detail.html" class="sidebar-post-item">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=120&q=70" alt="AI Design" class="sidebar-post-img" loading="lazy">
+            <div>
+              <p class="sidebar-post-title">The Future of UI Design in the Age of Generative AI</p>
+              <p class="sidebar-post-date"><i class="fa-regular fa-clock" style="margin-right:4px;"></i>8 min read · July 18, 2026</p>
+            </div>
+          </a>
+          <a href="blog-detail.html" class="sidebar-post-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=120&q=70" alt="Core Web Vitals" class="sidebar-post-img" loading="lazy">
+            <div>
+              <p class="sidebar-post-title">Core Web Vitals 2026: Our Complete Optimisation Playbook</p>
+              <p class="sidebar-post-date"><i class="fa-regular fa-clock" style="margin-right:4px;"></i>13 min read · June 2, 2026</p>
+            </div>
+          </a>
+          <a href="blog-detail.html" class="sidebar-post-item">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120&q=70" alt="RAG Pipeline" class="sidebar-post-img" loading="lazy">
+            <div>
+              <p class="sidebar-post-title">Building a Production-Grade RAG Pipeline: Lessons from the Field</p>
+              <p class="sidebar-post-date"><i class="fa-regular fa-clock" style="margin-right:4px;"></i>14 min read · June 27, 2026</p>
+            </div>
+          </a>
+          <a href="blog-detail.html" class="sidebar-post-item">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&q=70" alt="SEO 2026" class="sidebar-post-img" loading="lazy">
+            <div>
+              <p class="sidebar-post-title">SEO in the AI Search Era: What Actually Moves the Needle</p>
+              <p class="sidebar-post-date"><i class="fa-regular fa-clock" style="margin-right:4px;"></i>9 min read · June 21, 2026</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget reveal">
+          <h3 class="sidebar-heading"><i class="fa-solid fa-folder-open" style="color:var(--purple-400);margin-right:8px;"></i>Categories</h3>
+          <div style="display:flex;flex-direction:column;gap:.1rem;">
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-pen-ruler" style="color:var(--purple-400);width:16px;margin-right:8px;"></i>Design</span>
+              <span style="background:rgba(109,40,255,.12);border:1px solid rgba(109,40,255,.2);color:var(--purple-400);border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">12</span>
+            </a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-code" style="color:var(--blue-400);width:16px;margin-right:8px;"></i>Development</span>
+              <span style="background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.2);color:var(--blue-400);border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">18</span>
+            </a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-robot" style="color:#A855F7;width:16px;margin-right:8px;"></i>AI & Machine Learning</span>
+              <span style="background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.2);color:#A855F7;border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">9</span>
+            </a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-gem" style="color:#FBBF24;width:16px;margin-right:8px;"></i>Branding</span>
+              <span style="background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.2);color:#FBBF24;border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">14</span>
+            </a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-chart-line" style="color:#10B981;width:16px;margin-right:8px;"></i>Marketing</span>
+              <span style="background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:#10B981;border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">11</span>
+            </a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .2s;" onmouseover="this.style.color='var(--purple-400)'" onmouseout="this.style.color='var(--text-secondary)'">
+              <span><i class="fa-solid fa-industry" style="color:#EC4899;width:16px;margin-right:8px;"></i>Industry Insights</span>
+              <span style="background:rgba(236,72,153,.12);border:1px solid rgba(236,72,153,.2);color:#EC4899;border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;">7</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-widget reveal" style="background:linear-gradient(135deg,rgba(109,40,255,.12),rgba(59,130,246,.12));border-color:rgba(109,40,255,.3);">
+          <h3 class="sidebar-heading" style="color:var(--purple-400);border-bottom-color:rgba(109,40,255,.2);">
+            <i class="fa-solid fa-envelope-open-text" style="margin-right:8px;"></i>Newsletter
+          </h3>
+          <p style="font-size:.85rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.25rem;">
+            Get our best articles, design tips, and industry insights delivered to your inbox every two weeks. No spam, ever.
+          </p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="text" placeholder="Your name" class="newsletter-input" aria-label="Your name">
+            <input type="email" placeholder="Your email address" class="newsletter-input" aria-label="Email address">
+            <button type="submit" class="btn btn-primary" style="justify-content:center;">
+              Subscribe <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p style="font-size:.72rem;color:var(--text-muted);margin-top:.75rem;text-align:center;">
+            <i class="fa-solid fa-lock" style="margin-right:4px;"></i>2,400+ subscribers. Unsubscribe anytime.
+          </p>
+        </div>
+
+        <!-- Tags -->
+        <div class="sidebar-widget reveal">
+          <h3 class="sidebar-heading"><i class="fa-solid fa-tags" style="color:var(--purple-400);margin-right:8px;"></i>Popular Tags</h3>
+          <div class="tag-cloud">
+            <a href="#" class="tag-pill">Figma</a>
+            <a href="#" class="tag-pill">React</a>
+            <a href="#" class="tag-pill">UX Research</a>
+            <a href="#" class="tag-pill">AI Design</a>
+            <a href="#" class="tag-pill">Next.js</a>
+            <a href="#" class="tag-pill">Branding</a>
+            <a href="#" class="tag-pill">Typography</a>
+            <a href="#" class="tag-pill">SEO</a>
+            <a href="#" class="tag-pill">LLM</a>
+            <a href="#" class="tag-pill">Motion</a>
+            <a href="#" class="tag-pill">Web Performance</a>
+            <a href="#" class="tag-pill">FinTech</a>
+            <a href="#" class="tag-pill">Design System</a>
+            <a href="#" class="tag-pill">Accessibility</a>
+          </div>
+        </div>
+
+      </aside><!-- /blog-sidebar -->
+
+    </div><!-- /blog-grid -->
+  </div><!-- /container -->
+</section>
+
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="footer-logo-img"></div>
+        <p class="footer-tagline">Visual • Audio • Tech • Zone. A premium creative digital agency transforming brands through design, technology, and innovation.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">UI/UX Design</a></li>
+          <li><a href="services.html">Branding</a></li>
+          <li><a href="services.html">Web Development</a></li>
+          <li><a href="services.html">AI Solutions</a></li>
+          <li><a href="services.html">Digital Marketing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot" style="color:var(--purple-400);width:16px;"></i> 123 Creative Ave, Tech City</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope" style="color:var(--purple-400);width:16px;"></i> hello@vatz.studio</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone" style="color:var(--purple-400);width:16px;"></i> +1 (555) 123-4567</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock" style="color:var(--purple-400);width:16px;"></i> Mon – Fri, 9am – 6pm</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 VATZ. All rights reserved. Designed with <i class="fa-solid fa-heart" style="color:var(--purple-400);"></i> by the VATZ team.</p>
+      <p><a href="#" style="color:var(--text-muted);">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:var(--text-muted);">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">
+  <div class="scroll-top-circle"><i class="fa-solid fa-arrow-up"></i></div>
+  <div class="scroll-top-line"></div>
+  <span class="scroll-top-text">Top</span>
+</button>
+<script src="js/main.js"></script>
+</body>
+</html>

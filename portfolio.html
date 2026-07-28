@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VATZ Portfolio - Explore our award-winning projects in UI/UX Design, Branding, Web Development, AI Solutions, Photography, Video, and Audio.">
+  <meta name="robots" content="index, follow">
+  <title>Portfolio | VATZ - Creative Digital Agency</title>
+  <link rel="canonical" href="https://vatz.studio/portfolio.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='80' fill='%236D28FF'>V</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VATZ">
+  <meta property="og:title" content="Portfolio | VATZ - Creative Digital Agency">
+  <meta property="og:description" content="Explore VATZ's award-winning projects in UI/UX Design, Branding, Web Development, AI Solutions, Photography, Video, and Audio.">
+  <meta property="og:url" content="https://vatz.studio/portfolio.html">
+  <meta property="og:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio | VATZ - Creative Digital Agency">
+  <meta name="twitter:description" content="Explore VATZ's award-winning projects in UI/UX Design, Branding, Web Development, AI Solutions, Photography, Video, and Audio.">
+  <meta name="twitter:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vatz.studio/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://vatz.studio/portfolio.html" }
+    ]
+  }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══════════════ SITE HEADER ══════════════ -->
+<header id="site-header" role="banner">
+  <a href="index.html" class="header-logo" aria-label="VATZ — Home">
+    <img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="header-logo-img">
+  </a>
+  <nav class="header-nav" aria-label="Primary navigation">
+    <a href="services.html"     class="header-nav-link" data-page="services.html">Services</a>
+    <a href="solutions.html"    class="header-nav-link" data-page="solutions.html">Solutions</a>
+    <a href="portfolio.html"    class="header-nav-link active" data-page="portfolio.html">Our Work</a>
+    <a href="industries.html"   class="header-nav-link" data-page="industries.html">Industries</a>
+    <a href="technologies.html" class="header-nav-link" data-page="technologies.html">Technologies</a>
+    <a href="careers.html"      class="header-nav-link" data-page="careers.html">Careers</a>
+  </nav>
+  <div class="header-right">
+    <a href="tel:+15551234567" class="header-phone-btn" aria-label="Call us">
+      <i class="fa-solid fa-phone-volume"></i>
+    </a>
+    <button class="mega-menu-trigger" aria-controls="mega-menu-overlay" aria-expanded="false" aria-label="Toggle navigation menu">
+      <div class="mega-trigger-label-wrap">
+        <span class="mega-trigger-label-menu">MENU</span>
+        <span class="mega-trigger-label-close" aria-hidden="true">CLOSE</span>
+      </div>
+      <div class="mega-trigger-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════ MEGA MENU OVERLAY ══════════════ -->
+<div id="mega-menu-overlay" class="mega-menu-overlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <div class="mm-body">
+    <ul class="mm-main" aria-label="Menu links">
+      <li class="mm-item">
+        <a href="about.html" class="mm-link" data-page="about.html">
+          <span class="mm-link-num">01</span>About Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="blog.html" class="mm-link" data-page="blog.html">
+          <span class="mm-link-num">02</span>Blog
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="industries.html" class="mm-link" data-page="industries.html">
+          <span class="mm-link-num">03</span>Industries
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="contact.html" class="mm-link" data-page="contact.html">
+          <span class="mm-link-num">04</span>Contact Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+    </ul>
+    <!-- Responsive-only extra links (hidden on desktop ≥1101px) -->
+    <div class="mm-extra-links" aria-label="More page links">
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="index.html" class="mm-link" data-page="index.html"><span class="mm-link-num">05</span>Home<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="services.html" class="mm-link" data-page="services.html"><span class="mm-link-num">06</span>Services<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="solutions.html" class="mm-link" data-page="solutions.html"><span class="mm-link-num">07</span>Solutions<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="portfolio.html" class="mm-link active" data-page="portfolio.html"><span class="mm-link-num">08</span>Our Work<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="technologies.html" class="mm-link" data-page="technologies.html"><span class="mm-link-num">09</span>Technologies<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="careers.html" class="mm-link" data-page="careers.html"><span class="mm-link-num">10</span>Careers<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+    </div>
+    <div class="mm-info-panel" aria-hidden="true">
+      <div>
+        <h2 class="mm-info-heading">About VATZ</h2>
+        <p class="mm-info-desc">VATZ is a premium creative digital agency blending visual artistry, audio excellence, and cutting-edge technology to deliver transformative brand experiences for clients worldwide.</p>
+      </div>
+      <div class="mm-stats">
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">10<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Years of Expertise</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">150<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Clients Globally</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">250<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Completed Projects</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">40<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Dedicated Creators</div>
+        </div>
+      </div>
+      <a href="about.html" class="mm-info-cta">More about Us <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="mm-footer">
+    <div class="mm-footer-links">
+      <a href="index.html"        class="mm-footer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="services.html"     class="mm-footer-link"><i class="fa-solid fa-gears"></i> Services</a>
+      <a href="technologies.html" class="mm-footer-link"><i class="fa-solid fa-microchip"></i> Technologies</a>
+    </div>
+    <a href="contact.html" class="mm-cta-btn">Start a Project <i class="fa-solid fa-paper-plane"></i></a>
+  </div>
+</div>
+
+  <!-- Page Hero -->
+  <section class="page-hero" id="main-content">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-bg-orb"></div>
+    <div class="hero-bg-orb"></div>
+    <div class="container page-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span style="color: var(--purple-400);">Portfolio</span>
+      </nav>
+      <span class="section-label reveal">Our Work</span>
+      <h1 class="section-title reveal delay-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+        Creative <span class="gradient-text">Portfolio</span>
+      </h1>
+      <p class="section-subtitle reveal delay-2" style="margin: 0 auto; text-align: center;">
+        A curated showcase of projects where creativity meets strategy — delivering measurable impact for global brands.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ux">UI/UX</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="photo">Photography</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="masonry-grid">
+
+        <!-- Branding Projects -->
+        <div class="masonry-item reveal" data-category="branding" data-lightbox data-title="TechCorp Identity System">
+          <div style="background: linear-gradient(135deg, #6D28FF 0%, #A855F7 100%); height: 320px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-building" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Branding</p>
+            <p class="masonry-item-title">TechCorp Identity System</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-1" data-category="web" data-lightbox data-title="Fashion E-Commerce Store">
+          <div style="background: linear-gradient(135deg, #3B82F6 0%, #6D28FF 100%); height: 260px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-bag-shopping" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Web Development</p>
+            <p class="masonry-item-title">Fashion E-Commerce Store</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-2" data-category="video" data-lightbox data-title="Product Launch Film">
+          <div style="background: linear-gradient(135deg, #A855F7 0%, #60A5FA 100%); height: 400px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-clapperboard" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Videography</p>
+            <p class="masonry-item-title">Product Launch Film</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-1" data-category="ux" data-lightbox data-title="FinTech Mobile App">
+          <div style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%); height: 350px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-mobile-screen" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">UI/UX Design</p>
+            <p class="masonry-item-title">FinTech Mobile App</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-2" data-category="branding" data-lightbox data-title="Luxe Coffee Brand">
+          <div style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); height: 280px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-mug-hot" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Branding</p>
+            <p class="masonry-item-title">Luxe Coffee Brand</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-3" data-category="ai" data-lightbox data-title="AI Analytics Dashboard">
+          <div style="background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%); height: 310px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-robot" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">AI Solutions</p>
+            <p class="masonry-item-title">AI Analytics Dashboard</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal" data-category="photo" data-lightbox data-title="Architecture Editorial">
+          <div style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%); height: 380px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-building-columns" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Photography</p>
+            <p class="masonry-item-title">Architecture Editorial</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-1" data-category="web" data-lightbox data-title="SaaS Platform Dashboard">
+          <div style="background: linear-gradient(135deg, #6D28FF 0%, #10B981 100%); height: 260px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-chart-pie" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Web Development</p>
+            <p class="masonry-item-title">SaaS Platform Dashboard</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-2" data-category="ux" data-lightbox data-title="Travel App Redesign">
+          <div style="background: linear-gradient(135deg, #EC4899 0%, #A855F7 100%); height: 300px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-plane-departure" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">UI/UX Design</p>
+            <p class="masonry-item-title">Travel App Redesign</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-3" data-category="video" data-lightbox data-title="Corporate Brand Documentary">
+          <div style="background: linear-gradient(135deg, #1D4ED8 0%, #7C3AED 100%); height: 340px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-video" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Videography</p>
+            <p class="masonry-item-title">Corporate Brand Documentary</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal" data-category="branding" data-lightbox data-title="Wellness App Branding">
+          <div style="background: linear-gradient(135deg, #34D399 0%, #06B6D4 100%); height: 270px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-leaf" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">Branding</p>
+            <p class="masonry-item-title">Wellness App Branding</p>
+          </div>
+        </div>
+
+        <div class="masonry-item reveal delay-1" data-category="ai" data-lightbox data-title="Smart Home Automation">
+          <div style="background: linear-gradient(135deg, #F59E0B 0%, #6D28FF 100%); height: 290px; display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fa-solid fa-house-signal" style="color:rgba(255,255,255,0.5);"></i></div>
+          <div class="masonry-overlay">
+            <p class="masonry-item-cat">AI Solutions</p>
+            <p class="masonry-item-title">Smart Home Automation</p>
+          </div>
+        </div>
+
+      </div><!-- /masonry-grid -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Image preview">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" aria-label="Next">›</button>
+    <div style="text-align: center; position: relative; z-index: 2; padding: 1rem;">
+      <!-- For CSS gradient tiles we show a styled card instead of an img -->
+      <div id="lightbox-visual" style="width: 70vw; max-width: 900px; height: 60vh; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 6rem; margin: 0 auto;"></div>
+      <p id="lightbox-cat" style="font-size: 0.8rem; color: var(--purple-400); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 1rem;"></p>
+      <p id="lightbox-title" style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-top: 0.25rem;"></p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section reveal">
+        <h2 class="cta-title">Have a Project in Mind?</h2>
+        <p class="cta-subtitle">Let's collaborate and create something extraordinary together.</p>
+        <a href="contact.html" class="btn btn-primary">Start a Project <i class="fa-solid fa-paper-plane"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="footer-logo-img"></div>
+          <p class="footer-tagline">Visual • Audio • Tech • Zone. Premium creative digital agency.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Branding</a></li>
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">AI Solutions</a></li>
+            <li><a href="services.html">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot" style="color:var(--purple-400);width:16px;"></i> 123 Creative Ave, Tech City</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope" style="color:var(--purple-400);width:16px;"></i> hello@vatz.studio</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone" style="color:var(--purple-400);width:16px;"></i> +1 (555) 123-4567</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 VATZ. All rights reserved. Designed with <i class="fa-solid fa-heart" style="color:var(--purple-400);"></i> by the VATZ team.</p>
+        <p><a href="#" style="color: var(--text-muted);">Privacy Policy</a> · <a href="#" style="color: var(--text-muted);">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+<button id="scrollTop" aria-label="Scroll to top">
+  <div class="scroll-top-circle">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+  <div class="scroll-top-line"></div>
+  <span class="scroll-top-text">Top</span>
+</button>
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VATZ Technologies — Our full tech stack: React, Node.js, Python, AWS, Docker, Figma, TensorFlow and more powering world-class digital products.">
+  <meta name="robots" content="index, follow">
+  <title>Technologies | VATZ — Creative Digital Agency</title>
+  <link rel="canonical" href="https://vatz.studio/technologies.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='80' fill='%236D28FF'>V</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VATZ">
+  <meta property="og:title" content="Technologies | VATZ — Creative Digital Agency">
+  <meta property="og:description" content="Our full tech stack: React, Node.js, Python, AWS, Docker, Figma, TensorFlow and more.">
+  <meta property="og:url" content="https://vatz.studio/technologies.html">
+  <meta property="og:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Technologies | VATZ — Creative Digital Agency">
+  <meta name="twitter:description" content="Our full tech stack: React, Node.js, Python, AWS, Docker, Figma, TensorFlow and more.">
+  <meta name="twitter:image" content="https://vatz.studio/assets/images/og-cover.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vatz.studio/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Technologies", "item": "https://vatz.studio/technologies.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══════════════ SITE HEADER ══════════════ -->
+<header id="site-header" role="banner">
+  <a href="index.html" class="header-logo" aria-label="VATZ — Home">
+    <img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="header-logo-img">
+  </a>
+  <nav class="header-nav" aria-label="Primary navigation">
+    <a href="services.html"     class="header-nav-link" data-page="services.html">Services</a>
+    <a href="solutions.html"    class="header-nav-link" data-page="solutions.html">Solutions</a>
+    <a href="portfolio.html"    class="header-nav-link" data-page="portfolio.html">Our Work</a>
+    <a href="industries.html"   class="header-nav-link" data-page="industries.html">Industries</a>
+    <a href="technologies.html" class="header-nav-link" data-page="technologies.html">Technologies</a>
+    <a href="careers.html"      class="header-nav-link" data-page="careers.html">Careers</a>
+  </nav>
+  <div class="header-right">
+    <a href="tel:+15551234567" class="header-phone-btn" aria-label="Call us">
+      <i class="fa-solid fa-phone-volume"></i>
+    </a>
+    <button class="mega-menu-trigger" aria-controls="mega-menu-overlay" aria-expanded="false" aria-label="Toggle navigation menu">
+      <div class="mega-trigger-label-wrap">
+        <span class="mega-trigger-label-menu">MENU</span>
+        <span class="mega-trigger-label-close" aria-hidden="true">CLOSE</span>
+      </div>
+      <div class="mega-trigger-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════ MEGA MENU OVERLAY ══════════════ -->
+<div id="mega-menu-overlay" class="mega-menu-overlay" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <div class="mm-body">
+    <ul class="mm-main" aria-label="Menu links">
+      <li class="mm-item">
+        <a href="about.html" class="mm-link" data-page="about.html">
+          <span class="mm-link-num">01</span>About Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="blog.html" class="mm-link" data-page="blog.html">
+          <span class="mm-link-num">02</span>Blog
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="industries.html" class="mm-link" data-page="industries.html">
+          <span class="mm-link-num">03</span>Industries
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+      <li class="mm-item-divider" role="separator"></li>
+      <li class="mm-item">
+        <a href="contact.html" class="mm-link" data-page="contact.html">
+          <span class="mm-link-num">04</span>Contact Us
+          <span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </li>
+    </ul>
+    <!-- Responsive-only extra links (hidden on desktop ≥1101px) -->
+    <div class="mm-extra-links" aria-label="More page links">
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="index.html" class="mm-link" data-page="index.html"><span class="mm-link-num">05</span>Home<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="services.html" class="mm-link" data-page="services.html"><span class="mm-link-num">06</span>Services<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="solutions.html" class="mm-link" data-page="solutions.html"><span class="mm-link-num">07</span>Solutions<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="portfolio.html" class="mm-link" data-page="portfolio.html"><span class="mm-link-num">08</span>Our Work<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="technologies.html" class="mm-link" data-page="technologies.html"><span class="mm-link-num">09</span>Technologies<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+      <div class="mm-extra-divider"></div>
+      <li class="mm-item" style="list-style:none;"><a href="careers.html" class="mm-link" data-page="careers.html"><span class="mm-link-num">10</span>Careers<span class="mm-link-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+    </div>
+    <div class="mm-info-panel" aria-hidden="true">
+      <div>
+        <h2 class="mm-info-heading">About VATZ</h2>
+        <p class="mm-info-desc">VATZ is a premium creative digital agency blending visual artistry, audio excellence, and cutting-edge technology to deliver transformative brand experiences for clients worldwide.</p>
+      </div>
+      <div class="mm-stats">
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">10<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Years of Expertise</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">150<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Clients Globally</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">250<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Completed Projects</div>
+        </div>
+        <div class="mm-stat-item">
+          <div class="mm-stat-num">40<span class="mm-stat-plus">+</span></div>
+          <div class="mm-stat-label">Dedicated Creators</div>
+        </div>
+      </div>
+      <a href="about.html" class="mm-info-cta">More about Us <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="mm-footer">
+    <div class="mm-footer-links">
+      <a href="index.html"        class="mm-footer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="services.html"     class="mm-footer-link"><i class="fa-solid fa-gears"></i> Services</a>
+      <a href="technologies.html" class="mm-footer-link"><i class="fa-solid fa-microchip"></i> Technologies</a>
+    </div>
+    <a href="contact.html" class="mm-cta-btn">Start a Project <i class="fa-solid fa-paper-plane"></i></a>
+  </div>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero" id="main-content">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-bg-orb"></div>
+  <div class="hero-bg-orb"></div>
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--purple-400);">Technologies</span>
+    </nav>
+    <span class="section-label reveal"><i class="fa-solid fa-microchip"></i> Our Tech Stack</span>
+    <h1 class="section-title reveal delay-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+      Powered by the <span class="gradient-text">Best Tools</span>
+    </h1>
+    <p class="section-subtitle reveal delay-2" style="margin: 0 auto; text-align: center;">
+      We carefully select best-in-class technologies for every layer of the stack — ensuring every product we build is fast, scalable, maintainable, and future-proof.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FRONTEND ═══ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:4rem;">
+      <span class="section-label reveal"><i class="fa-solid fa-layer-group"></i> Full Stack Coverage</span>
+      <h2 class="section-title reveal delay-1">Technologies We Master</h2>
+      <p class="section-subtitle reveal delay-2" style="margin:0 auto;">
+        From pixel-perfect frontend frameworks to robust backend infrastructure and cutting-edge AI — our engineers and designers are fluent across the entire modern stack.
+      </p>
+    </div>
+
+    <!-- Frontend -->
+    <div style="margin-bottom:4rem;">
+      <div class="tech-category-label reveal"><i class="fa-solid fa-desktop"></i> Frontend Development</div>
+      <div class="tech-stack-grid">
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-react" style="color:#61DAFB;"></i>
+          <span>React</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-brands fa-js" style="color:#F7DF1E;"></i>
+          <span>JavaScript ES2024</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-code" style="color:#3178C6;"></i>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-wind" style="color:#38BDF8;"></i>
+          <span>Tailwind CSS</span>
+        </div>
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-html5" style="color:#E34F26;"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-brands fa-css3-alt" style="color:#1572B6;"></i>
+          <span>CSS3 / SASS</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-n" style="color:#000000;background:#fff;border-radius:4px;width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;font-size:1.1rem;"></i>
+          <span>Next.js</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-v" style="color:#41B883;"></i>
+          <span>Vue.js</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div style="margin-bottom:4rem;">
+      <div class="tech-category-label reveal"><i class="fa-solid fa-server"></i> Backend & APIs</div>
+      <div class="tech-stack-grid">
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-node-js" style="color:#68A063;"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-brands fa-python" style="color:#3776AB;"></i>
+          <span>Python</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-database" style="color:#336791;"></i>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-leaf" style="color:#4DB33D;"></i>
+          <span>MongoDB</span>
+        </div>
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-solid fa-bolt" style="color:#DC382D;"></i>
+          <span>Redis</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-solid fa-arrows-split-up-and-left" style="color:#6D28FF;"></i>
+          <span>GraphQL</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-plug" style="color:#00ACD7;"></i>
+          <span>REST APIs</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-brands fa-php" style="color:#777BB4;"></i>
+          <span>PHP / Laravel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div style="margin-bottom:4rem;">
+      <div class="tech-category-label reveal"><i class="fa-solid fa-cloud"></i> Cloud & DevOps</div>
+      <div class="tech-stack-grid">
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-aws" style="color:#FF9900;"></i>
+          <span>AWS</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-brands fa-google" style="color:#4285F4;"></i>
+          <span>Google Cloud</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-brands fa-docker" style="color:#2496ED;"></i>
+          <span>Docker</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-dharmachakra" style="color:#326CE5;"></i>
+          <span>Kubernetes</span>
+        </div>
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-git-alt" style="color:#F05032;"></i>
+          <span>Git / GitHub</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-solid fa-circle-nodes" style="color:#2088FF;"></i>
+          <span>CI/CD Pipelines</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-triangle" style="color:#000;background:#fff;border-radius:4px;padding:2px 4px;font-size:1rem;"></i>
+          <span>Vercel / Netlify</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-shield-halved" style="color:#F97316;"></i>
+          <span>Cloudflare</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Tools -->
+    <div style="margin-bottom:4rem;">
+      <div class="tech-category-label reveal"><i class="fa-solid fa-pen-nib"></i> Design & Creative</div>
+      <div class="tech-stack-grid">
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-brands fa-figma" style="color:#F24E1E;"></i>
+          <span>Figma</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-brands fa-adobe" style="color:#FF0000;"></i>
+          <span>Adobe CC</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-palette" style="color:#FF61F6;"></i>
+          <span>Adobe XD</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-wand-magic-sparkles" style="color:#31A8FF;"></i>
+          <span>After Effects</span>
+        </div>
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-solid fa-film" style="color:#9999FF;"></i>
+          <span>Premiere Pro</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-solid fa-music" style="color:#FF9000;"></i>
+          <span>Logic Pro</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-cube" style="color:#F5792A;"></i>
+          <span>Blender / 3D</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-photo-film" style="color:#34A853;"></i>
+          <span>DaVinci Resolve</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI & Machine Learning -->
+    <div>
+      <div class="tech-category-label reveal"><i class="fa-solid fa-robot"></i> AI & Machine Learning</div>
+      <div class="tech-stack-grid">
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-solid fa-brain" style="color:#FF6F00;"></i>
+          <span>TensorFlow</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-solid fa-fire-flame-curved" style="color:#EE4C2C;"></i>
+          <span>PyTorch</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-comment-dots" style="color:#10A37F;"></i>
+          <span>OpenAI API</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-language" style="color:#7B61FF;"></i>
+          <span>LangChain</span>
+        </div>
+        <div class="tech-stack-item reveal delay-1">
+          <i class="fa-solid fa-chart-bar" style="color:#F97316;"></i>
+          <span>scikit-learn</span>
+        </div>
+        <div class="tech-stack-item reveal delay-2">
+          <i class="fa-solid fa-magnifying-glass-chart" style="color:#3B82F6;"></i>
+          <span>Hugging Face</span>
+        </div>
+        <div class="tech-stack-item reveal delay-3">
+          <i class="fa-solid fa-table-cells" style="color:#150458;background:#fff;border-radius:4px;padding:3px 6px;font-size:.9rem;"></i>
+          <span>Pandas / NumPy</span>
+        </div>
+        <div class="tech-stack-item reveal delay-4">
+          <i class="fa-solid fa-vector-square" style="color:#A855F7;"></i>
+          <span>Pinecone / Vector DB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OUR ENGINEERING PHILOSOPHY ═══ -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:5rem;">
+      <div class="reveal-left">
+        <span class="section-label"><i class="fa-solid fa-compass-drafting"></i> Our Philosophy</span>
+        <h2 class="section-title">We Choose Tools That Last</h2>
+        <div class="divider"></div>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
+          We don't chase trends for the sake of it. Every tool and framework in our stack is selected for proven stability, active community support, and long-term scalability. When we recommend a technology to a client, it's because we've stress-tested it in production.
+        </p>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem;">
+          Our engineers stay ahead of the curve through continuous learning — attending conferences, contributing to open source, and running internal R&D sprints on emerging technologies like WebAssembly, edge computing, and generative AI.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:.75rem;">
+            <i class="fa-solid fa-shield-halved" style="color:var(--purple-400);font-size:1.2rem;"></i>
+            <span style="font-size:.88rem;font-weight:600;">Security-First</span>
+          </div>
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:.75rem;">
+            <i class="fa-solid fa-gauge-high" style="color:var(--blue-400);font-size:1.2rem;"></i>
+            <span style="font-size:.88rem;font-weight:600;">Performance-Obsessed</span>
+          </div>
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:.75rem;">
+            <i class="fa-solid fa-arrows-up-down-left-right" style="color:#10B981;font-size:1.2rem;"></i>
+            <span style="font-size:.88rem;font-weight:600;">Built to Scale</span>
+          </div>
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:.75rem;">
+            <i class="fa-solid fa-universal-access" style="color:#FBBF24;font-size:1.2rem;"></i>
+            <span style="font-size:.88rem;font-weight:600;">Accessibility Ready</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 24px 60px rgba(109,40,255,0.2);">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80"
+               alt="Engineering and code" style="width:100%;height:420px;object-fit:cover;display:block;" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OUR DEVELOPMENT PROCESS ═══ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:4rem;">
+      <span class="section-label reveal"><i class="fa-solid fa-route"></i> How We Build</span>
+      <h2 class="section-title reveal delay-1">Our Development Process</h2>
+      <p class="section-subtitle reveal delay-2" style="margin:0 auto;">
+        A structured, agile methodology that keeps you informed at every stage and delivers quality without surprises.
+      </p>
+    </div>
+    <div class="grid-2" style="gap:2rem;">
+      <div class="neo-card reveal delay-1" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">01</div>
+          <div class="process-step-body">
+            <h3>Discovery & Architecture</h3>
+            <p>We analyse your requirements, define the technical architecture, select the right stack, and set up the project infrastructure with CI/CD from day one.</p>
+          </div>
+        </div>
+      </div>
+      <div class="neo-card reveal delay-2" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">02</div>
+          <div class="process-step-body">
+            <h3>Design System & Prototyping</h3>
+            <p>We build a component library and interactive Figma prototype before writing a single line of production code — saving time and aligning stakeholders early.</p>
+          </div>
+        </div>
+      </div>
+      <div class="neo-card reveal delay-3" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">03</div>
+          <div class="process-step-body">
+            <h3>Agile Development Sprints</h3>
+            <p>Two-week sprints with daily standups, weekly demos, and a transparent Jira board mean you always know exactly what's being built and when it ships.</p>
+          </div>
+        </div>
+      </div>
+      <div class="neo-card reveal delay-4" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">04</div>
+          <div class="process-step-body">
+            <h3>QA, Testing & Performance Audit</h3>
+            <p>Comprehensive unit, integration, and end-to-end testing. Lighthouse audits target 90+ scores for Performance, Accessibility, Best Practices, and SEO.</p>
+          </div>
+        </div>
+      </div>
+      <div class="neo-card reveal delay-1" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">05</div>
+          <div class="process-step-body">
+            <h3>Deployment & Go-Live</h3>
+            <p>Zero-downtime deployments via automated pipelines to your infrastructure of choice — AWS, GCP, Vercel, or on-premise. SSL, CDN, and monitoring included.</p>
+          </div>
+        </div>
+      </div>
+      <div class="neo-card reveal delay-2" style="padding:2rem;">
+        <div class="process-step">
+          <div class="process-step-num">06</div>
+          <div class="process-step-body">
+            <h3>Ongoing Support & Iteration</h3>
+            <p>Post-launch retainer plans cover monitoring, security patches, feature iterations, and performance optimisation so your product stays best-in-class.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KEY METRICS ═══ -->
+<section class="section" style="background:var(--bg-secondary);padding:60px 0;">
+  <div class="container">
+    <div class="grid-4" style="text-align:center;">
+      <div class="glass-card reveal delay-1" style="padding:2rem;">
+        <div class="hero-stat-num" data-counter data-target="99" data-suffix="%">99%</div>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-top:6px;">Avg Uptime SLA</p>
+      </div>
+      <div class="glass-card reveal delay-2" style="padding:2rem;">
+        <div class="hero-stat-num" data-counter data-target="95" data-suffix="+">95+</div>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-top:6px;">Lighthouse Score</p>
+      </div>
+      <div class="glass-card reveal delay-3" style="padding:2rem;">
+        <div class="hero-stat-num" data-counter data-target="40" data-suffix="+">40+</div>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-top:6px;">Technologies Mastered</p>
+      </div>
+      <div class="glass-card reveal delay-4" style="padding:2rem;">
+        <div class="hero-stat-num" data-counter data-target="0" data-suffix=" CVEs">0 CVEs</div>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-top:6px;">Critical Vulnerabilities in 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED CAPABILITY: AI ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:5rem;">
+      <div class="reveal-right" style="order:2;">
+        <span class="section-label"><i class="fa-solid fa-robot"></i> AI-First Thinking</span>
+        <h2 class="section-title">We Don't Just Use AI — We Build With It</h2>
+        <div class="divider"></div>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
+          Generative AI and large language models aren't a side feature for us — they're embedded into our entire workflow. From AI-assisted design systems to custom RAG pipelines for enterprise clients, we build intelligent products that actually work in production.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <i class="fa-solid fa-comment-dots" style="color:var(--purple-400);font-size:1.3rem;width:24px;"></i>
+            <div>
+              <p style="font-weight:700;font-size:.9rem;margin-bottom:2px;">Custom LLM Integrations</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">GPT-4o, Claude 3.5, Gemini Pro — fine-tuned and deployed for your use case</p>
+            </div>
+          </div>
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <i class="fa-solid fa-magnifying-glass" style="color:var(--blue-400);font-size:1.3rem;width:24px;"></i>
+            <div>
+              <p style="font-weight:700;font-size:.9rem;margin-bottom:2px;">RAG & Knowledge Bases</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">Vector search pipelines on your private data with Pinecone, Weaviate, and pgvector</p>
+            </div>
+          </div>
+          <div class="neo-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color:#10B981;font-size:1.3rem;width:24px;"></i>
+            <div>
+              <p style="font-weight:700;font-size:.9rem;margin-bottom:2px;">Generative Design Tools</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">AI-powered design assistants, image generation pipelines, and copy automation</p>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Discuss Your AI Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="reveal-left" style="order:1;">
+        <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 24px 60px rgba(109,40,255,0.25);">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80"
+               alt="AI and machine learning" style="width:100%;height:420px;object-fit:cover;display:block;" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="section" style="padding-bottom:100px;">
+  <div class="container">
+    <div class="cta-section reveal">
+      <div class="cta-split">
+        <div>
+          <h2 class="cta-title" style="text-align:left;">Got a Project in Mind?<br><span class="gradient-text">Let's Engineer It.</span></h2>
+          <p class="cta-subtitle" style="text-align:left;">Tell us what you're building and we'll recommend the right stack and approach.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem;flex-shrink:0;">
+          <a href="contact.html" class="btn btn-primary" style="justify-content:center;">
+            Start a Project <i class="fa-solid fa-paper-plane"></i>
+          </a>
+          <a href="services.html" class="btn btn-outline" style="justify-content:center;">
+            <i class="fa-solid fa-layer-group"></i> View All Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo/VATZ_Logo.svg" alt="VATZ" class="footer-logo-img"></div>
+        <p class="footer-tagline">Visual • Audio • Tech • Zone. A premium creative digital agency transforming brands through design, technology, and innovation.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">UI/UX Design</a></li>
+          <li><a href="services.html">Branding</a></li>
+          <li><a href="services.html">Web Development</a></li>
+          <li><a href="services.html">AI Solutions</a></li>
+          <li><a href="services.html">Digital Marketing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot" style="color:var(--purple-400);width:16px;"></i> 123 Creative Ave, Tech City</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope" style="color:var(--purple-400);width:16px;"></i> hello@vatz.studio</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone" style="color:var(--purple-400);width:16px;"></i> +1 (555) 123-4567</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-clock" style="color:var(--purple-400);width:16px;"></i> Mon – Fri, 9am – 6pm</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 VATZ. All rights reserved. Designed with <i class="fa-solid fa-heart" style="color:var(--purple-400);"></i> by the VATZ team.</p>
+      <p><a href="#" style="color:var(--text-muted);">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:var(--text-muted);">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">
+  <div class="scroll-top-circle"><i class="fa-solid fa-arrow-up"></i></div>
+  <div class="scroll-top-line"></div>
+  <span class="scroll-top-text">Top</span>
+</button>
+<script src="js/main.js"></script>
+</body>
+</html>
