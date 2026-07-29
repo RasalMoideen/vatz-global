@@ -44,7 +44,7 @@ vatz/
 ├── css/
 │   └── main.css           # All styles — layout, components, animations, responsive
 ├── js/
-│   ├── main.js            # Core JS — nav, animations, slider, modal, counters, cursor
+│   ├── main.js            # Core JS — nav, animations, slider, modal, counters, cursor, page loader
 │   ├── contact.js         # Contact form validation and submission handling
 │   ├── custom-select.js   # Accessible custom dropdown component
 │   └── portfolio.js       # Portfolio masonry filter and lightbox
@@ -65,7 +65,7 @@ vatz/
 | Scripting | Vanilla JavaScript (ES2024, strict mode) |
 | Icons | Font Awesome 6.5.1 (CDN) |
 | Images | Unsplash (hotlinked, with SVG gradient fallback) |
-| Fonts | System font stack |
+| Fonts | Gotham (primary), Inter, Plus Jakarta Sans (fallbacks) |
 | SEO | Open Graph, Twitter Card, JSON-LD structured data, canonical URLs |
 
 No npm. No bundler. No runtime dependencies.
@@ -73,6 +73,16 @@ No npm. No bundler. No runtime dependencies.
 ---
 
 ## Features
+
+**Page Loading**
+- Full-screen premium preloader on every page
+- Animated VATZ "V" logo — SVG polygon draws in with a scale-up, then gently breathes
+- Two-phase progress bar: eased ramp to ~85 % on `DOMContentLoaded`, sprints to 100 % on `window.load`
+- Percentage counter synced to the bar in real time
+- Exit animation: curtain wipe-up reveals the page, then the overlay fades out
+- Self-removes from the DOM after all transitions complete
+- 6-second safety timeout guarantees the loader always clears
+- `prefers-reduced-motion`: animations skipped, instant dismiss
 
 **Navigation**
 - Fixed header with scroll-hide on scroll-down / reveal on scroll-up
@@ -105,6 +115,7 @@ No npm. No bundler. No runtime dependencies.
 - Skip-to-content link on every page
 - All interactive elements keyboard-accessible
 - `aria-label`, `aria-expanded`, `aria-modal`, `role` attributes throughout
+- Page loader uses `role="status"` and `aria-live="polite"` for screen reader compatibility
 - `robots.txt` and `sitemap.xml` included
 - `prefers-reduced-motion` respected — all JS animations disabled when set
 
@@ -140,19 +151,23 @@ All colors are defined as CSS custom properties in `css/main.css`:
 
 ```css
 :root {
-  --purple-400: #A78BFA;
-  --purple-600: #6D28FF;
-  --blue-400:   #60A5FA;
-  --bg-primary:    #0A0A0F;
-  --bg-secondary:  #111118;
-  --text-primary:  #F1F5F9;
-  --text-secondary:#94A3B8;
-  --text-muted:    #64748B;
+  --purple-600:    #6D28FF;
+  --purple-500:    #8B5CF6;
+  --purple-400:    #A855F7;
+  --blue-500:      #3B82F6;
+  --blue-400:      #60A5FA;
+  --bg-primary:    #050505;
+  --bg-secondary:  #0B0B0B;
+  --text-primary:  #F9FAFB;
+  --text-secondary:#9CA3AF;
+  --text-muted:    #6B7280;
 }
 ```
 
 ### Logo
 Replace `assets/images/logo/VATZ_Logo.svg` with your own SVG. The `<img>` tag references it on every page via `assets/images/logo/VATZ_Logo.svg`.
+
+The page loader also renders an inline SVG "V" polygon. To change its shape, edit the `<polygon points="...">` inside the `#page-loader` markup in each HTML file, or update the shared snippet if you move it to a server-side include.
 
 ### Real images
 The site currently uses Unsplash hotlinks. To use local images:
@@ -206,6 +221,17 @@ Drop the entire folder onto any static hosting platform:
 - **AWS S3** — enable static website hosting and upload all files
 
 No server-side processing is needed.
+
+---
+
+## Changelog
+
+### July 2026
+- Added full-screen premium page loading animation across all 11 pages
+  - SVG logo draw-in + breathe keyframes
+  - Two-phase eased progress bar with percentage counter
+  - Curtain wipe-up exit with DOM self-cleanup
+  - Full `prefers-reduced-motion` support
 
 ---
 
