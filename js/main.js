@@ -590,6 +590,7 @@ const initSolHeroSlider = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();        // Must be first — sets [data-theme] before any paint
   initNavbar();
   initSmoothScroll();
   initScrollReveal();
@@ -1014,4 +1015,95 @@ const initTocHighlight = () => {
   }, { rootMargin: '-20% 0px -70% 0px' });
 
   sections.forEach(s => obs.observe(s));
+};
+
+/* ============================================================
+   THEME TOGGLE
+   - Reads saved preference from localStorage on every page load
+   - Falls back to OS prefers-color-scheme on first visit
+   - Writes chosen theme to <html data-theme="..."> so CSS picks it up
+   - Wires all .theme-toggle buttons (one per page in the header)
+   - Dispatches a custom 'themechange' event for any other scripts to hook into
+   ============================================================ */
+const initTheme = () => {
+  const STORAGE_KEY = 'vatz-theme';
+  const DARK        = 'dark';
+  const LIGHT       = 'light';
+  const root        = document.documentElement;
+
+  /* Animation duration must match CSS (icon-out: 0.28s + icon-in delay 0.08s + 0.35s ≈ 450ms) */
+  const ANIM_DURATION = 460;
+
+  /* ── Determine initial theme — runs before first paint ── */
+  const saved   = localStorage.getItem(STORAGE_KEY);
+  const osDark  = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initial = saved || (osDark ? DARK : LIGHT);
+
+  root.setAttribute('data-theme', initial);
+
+  /* ── Sync aria attributes on all toggle buttons ── */
+  const syncAria = (theme) => {
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.setAttribute('aria-label',   theme === DARK ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-pressed', theme === LIGHT ? 'true' : 'false');
+    });
+  };
+
+  /* ── Apply theme: set data-theme, persist, sync aria, fire event ── */
+  const applyTheme = (theme, animate = false) => {
+    if (animate) {
+      /* Trigger icon-swap animation on every button, then flip the theme */
+      const switchClass = theme === LIGHT ? 'theme-switching-to-light' : 'theme-switching-to-dark';
+
+      document.querySelectorAll('.theme-toggle').forEach(btn => {
+        /* Prevent double-firing while animation is running */
+        if (btn.dataset.switching) return;
+        btn.dataset.switching = '1';
+        btn.classList.add(switchClass);
+
+        /* After animation completes, clean up classes */
+        setTimeout(() => {
+          btn.classList.remove(switchClass);
+          delete btn.dataset.switching;
+        }, ANIM_DURATION);
+      });
+
+      /* Apply the new theme mid-animation (icon-out finishes at ~0.28s, new
+         theme lands just as icon-in begins at 0.08s offset → seamless) */
+      setTimeout(() => {
+        root.setAttribute('data-theme', theme);
+        syncAria(theme);
+        root.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+      }, 120);
+
+    } else {
+      /* Silent apply — initial load, no animation */
+      root.setAttribute('data-theme', theme);
+      syncAria(theme);
+      root.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+    }
+
+    localStorage.setItem(STORAGE_KEY, theme);
+  };
+
+  /* Sync aria on load (no animation on first render) */
+  syncAria(initial);
+
+  /* ── Wire every .theme-toggle button ── */
+  const bindToggle = (btn) => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.switching) return; /* debounce rapid clicks */
+      const current = root.getAttribute('data-theme') || DARK;
+      applyTheme(current === DARK ? LIGHT : DARK, true);
+    });
+  };
+
+  document.querySelectorAll('.theme-toggle').forEach(bindToggle);
+
+  /* ── Follow OS preference changes only when user hasn't manually chosen ── */
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      applyTheme(e.matches ? DARK : LIGHT, false);
+    }
+  });
 };
