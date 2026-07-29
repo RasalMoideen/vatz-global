@@ -3638,3 +3638,195 @@ body *::after {
 @media (max-width: 360px) {
   .theme-toggle { display: none; }
 }
+
+/* ============================================================
+   PAGE LOADER
+   Industry-standard full-screen preloader with:
+   — Gradient "V" logo pulse + draw-in animation
+   — Animated progress bar that JS drives to 100 %
+   — Percentage counter synced to the bar
+   — Curtain wipe-away on exit (slides up to reveal page)
+   — body.loader-hidden class removes overflow lock once done
+   — Reduced-motion: skips animations, instant dismiss
+   ============================================================ */
+
+/* ── Lock scroll while loader is visible ── */
+body:not(.loader-hidden) {
+  overflow: hidden;
+}
+
+/* ── Backdrop ── */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);          /* #050505 — matches site bg */
+  /* Subtle radial glow behind the logo */
+  background-image:
+    radial-gradient(ellipse 55% 40% at 50% 60%,
+      rgba(109, 40, 255, 0.12) 0%,
+      transparent 70%);
+
+  /* Exit: the whole panel fades out AFTER the curtain has wiped up */
+  transition: opacity 0.35s ease 0.55s, visibility 0s linear 0.9s;
+}
+
+/* Dismissed state — set by JS */
+.page-loader.loader-exit {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ── Central content wrapper ── */
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Logo container ── */
+.loader-logo {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Soft outer glow ring */
+.loader-logo::before {
+  content: '';
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(109, 40, 255, 0.18) 0%,
+    transparent 70%);
+  animation: loader-glow-pulse 2s ease-in-out infinite;
+}
+
+/* SVG itself — draws in then gently breathes */
+.loader-logo-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 18px rgba(109, 40, 255, 0.55));
+  animation: loader-logo-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+             loader-logo-breathe 2.4s ease-in-out 0.7s infinite;
+}
+
+/* SVG polygon draw-in: clip from bottom with scale */
+.loader-v {
+  transform-origin: center bottom;
+  animation: loader-v-draw 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+/* ── Progress track ── */
+.loader-track {
+  width: 160px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Shimmering fill bar — JS sets --loader-pct custom property (0-100) */
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: var(--radius-full);
+  background: var(--grad-primary);        /* purple → blue brand gradient */
+  box-shadow: 0 0 10px rgba(109, 40, 255, 0.7);
+  transition: width 0.08s linear;
+  position: relative;
+}
+
+/* Leading edge gleam */
+.loader-bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 8px 3px rgba(109, 40, 255, 0.9);
+  opacity: 0.9;
+}
+
+/* ── Percentage number ── */
+.loader-pct {
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  /* append "%" via pseudo-element so screen readers skip it */
+}
+.loader-pct::after {
+  content: '%';
+}
+
+/* ── Curtain wipe ── */
+.loader-curtain {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-secondary);        /* #0B0B0B */
+  transform: translateY(100%);            /* starts below viewport */
+  z-index: 1;
+  /* On exit: slides UP in 0.5 s → covers everything → loader fades out on top */
+  transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-loader.loader-exit .loader-curtain {
+  transform: translateY(0%);
+}
+
+/* ── Keyframes ── */
+@keyframes loader-logo-in {
+  from { opacity: 0; transform: scale(0.72) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+
+@keyframes loader-logo-breathe {
+  0%,  100% { transform: scale(1);    filter: drop-shadow(0 0 18px rgba(109, 40, 255, 0.55)); }
+  50%        { transform: scale(1.07); filter: drop-shadow(0 0 26px rgba(109, 40, 255, 0.80)); }
+}
+
+@keyframes loader-v-draw {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes loader-glow-pulse {
+  0%,  100% { opacity: 0.6; transform: scale(1);    }
+  50%        { opacity: 1;   transform: scale(1.15); }
+}
+
+/* ── Reduced motion — skip all animations; instant hide ── */
+@media (prefers-reduced-motion: reduce) {
+  .loader-logo-svg,
+  .loader-v,
+  .loader-logo::before {
+    animation: none !important;
+  }
+  .page-loader.loader-exit {
+    /* Instant dismiss — no transition delay */
+    transition: opacity 0.001ms, visibility 0s !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .loader-curtain {
+    transition: none !important;
+  }
+}

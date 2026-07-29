@@ -41,6 +41,29 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+<!-- ══════════════ PAGE LOADER ══════════════ -->
+<div id="page-loader" class="page-loader" role="status" aria-label="Loading" aria-live="polite">
+  <div class="loader-inner">
+    <div class="loader-logo" aria-hidden="true">
+      <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="loader-logo-svg">
+        <polygon class="loader-v" points="5,8 20,52 30,28 40,52 55,8 46,8 30,43 14,8" fill="url(#loaderGrad)"/>
+        <defs>
+          <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#6D28FF"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="loader-track" aria-hidden="true">
+      <div class="loader-bar"></div>
+    </div>
+    <span class="loader-pct" aria-hidden="true">0</span>
+  </div>
+  <div class="loader-curtain" aria-hidden="true"></div>
+</div>
+
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ══════════════ SITE HEADER ══════════════ -->

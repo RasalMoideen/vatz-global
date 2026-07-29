@@ -589,7 +589,112 @@ const initSolHeroSlider = () => {
 };
 
 
+/* ============================================
+   PAGE LOADER
+   ============================================
+   Strategy
+   ─────────
+   • Simulates realistic progress in two phases:
+       Phase 1 (DOMContentLoaded)  → runs bar to ~85 % at a natural pace
+       Phase 2 (window.load)       → sprints remaining gap to 100 %,
+                                     then triggers the curtain-wipe exit
+   • Falls back to a hard 6 s timeout so the loader *always* clears
+     even if window.load never fires (heavy assets, offline, etc.)
+   • Respects prefers-reduced-motion: skips ticks, dismisses instantly
+   • Idempotent — safe to call on pages without #page-loader present
+   ============================================ */
+const initPageLoader = () => {
+  const loader  = document.getElementById('page-loader');
+  if (!loader) return;
+
+  const bar     = loader.querySelector('.loader-bar');
+  const pctEl   = loader.querySelector('.loader-pct');
+
+  let progress  = 0;       // 0–100
+  let tickerId  = null;
+  let dismissed = false;
+
+  /* ── Reduced-motion: skip everything, dismiss immediately ── */
+  if (prefersReducedMotion) {
+    loader.classList.add('loader-exit');
+    document.body.classList.add('loader-hidden');
+    return;
+  }
+
+  /* ── Update bar width + counter label ── */
+  const setProgress = (val) => {
+    progress = Math.min(Math.max(val, progress), 100); // monotonic, 0-100
+    if (bar)   bar.style.width  = progress + '%';
+    if (pctEl) pctEl.textContent = Math.round(progress);
+  };
+
+  /* ── Dismiss: add exit class → CSS curtain wipes up, then fade out ── */
+  const dismiss = () => {
+    if (dismissed) return;
+    dismissed = true;
+    clearInterval(tickerId);
+
+    setProgress(100);
+
+    /* Small pause at 100 % so user sees the completed state */
+    setTimeout(() => {
+      loader.classList.add('loader-exit');
+      document.body.classList.add('loader-hidden');
+
+      /* Remove from DOM after all CSS transitions finish (~950 ms total) */
+      loader.addEventListener('transitionend', () => {
+        if (loader.parentNode) loader.parentNode.removeChild(loader);
+      }, { once: true });
+    }, 220);
+  };
+
+  /* ── Phase 1: natural tick toward ~85 % (starts immediately) ── */
+  const PHASE1_TARGET = 85;
+  const TICK_INTERVAL = 35;   // ms between ticks
+
+  tickerId = setInterval(() => {
+    if (progress >= PHASE1_TARGET) {
+      clearInterval(tickerId);
+      return;
+    }
+    /* Eased increment — fast at start, slows near target */
+    const remaining = PHASE1_TARGET - progress;
+    const step      = Math.max(0.4, remaining * 0.045);
+    setProgress(progress + step);
+  }, TICK_INTERVAL);
+
+  /* ── Phase 2: window.load → sprint to 100 % and dismiss ── */
+  const onLoaded = () => {
+    clearInterval(tickerId);
+
+    /* Animate remaining gap quickly (from current position to 100) */
+    const sprint = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(sprint);
+        dismiss();
+        return;
+      }
+      const remaining = 100 - progress;
+      const step      = Math.max(1, remaining * 0.18);
+      setProgress(progress + step);
+    }, TICK_INTERVAL);
+  };
+
+  if (document.readyState === 'complete') {
+    /* Page already fully loaded (e.g. back/forward cache hit) */
+    onLoaded();
+  } else {
+    window.addEventListener('load', onLoaded, { once: true });
+  }
+
+  /* ── Safety net: always dismiss within 6 s ── */
+  setTimeout(() => {
+    if (!dismissed) dismiss();
+  }, 6000);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  initPageLoader();   // First — locks scroll & starts progress before any paint
   initTheme();        // Must be first — sets [data-theme] before any paint
   initNavbar();
   initSmoothScroll();
